@@ -10,8 +10,10 @@ namespace Azure.Security.KeyVault.AccessControl
         public string Name { get; }
         public string Type { get; }
 
-        public string RoleDefinitionId => Properties.RoleDefinitionId;
-        public string PrincipalId => Properties.PrincipalId;
-        public RoleAssignmentProperties Properties { get; }
+        // These are flattened from RoleAssignmentProperties.
+        // Being a class, we probably don't want to nest it even as a field but can reuse parsing logic.
+        public string Scope { get; }
+        public string RoleDefinitionId { get; }
+        public string PrincipalId { get; }
     }
 }

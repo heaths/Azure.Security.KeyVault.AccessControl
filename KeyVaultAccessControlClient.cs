@@ -19,17 +19,15 @@ namespace Azure.Security.KeyVault.AccessControl
 
         public Uri VaultUri { get; }
 
-        // The optional $filter parameter accepts the roleName property.
-        public Pageable<RoleDefinition> GetRoleDefinitions(Uri scope, RoleDefinitionFilter? filter = default, CancellationToken cancellationToken = default) => null;
-        public Pageable<RoleDefinition> GetRoleDefinitions(string scope, RoleDefinitionFilter? filter = default, CancellationToken cancellationToken = default) => null;
-        public AsyncPageable<RoleDefinition> GetRoleDefinitionsAsync(Uri scope, RoleDefinitionFilter? filter = default, CancellationToken cancellationToken = default) => null;
-        public AsyncPageable<RoleDefinition> GetRoleDefinitionsAsync(string scope, RoleDefinitionFilter? filter = default, CancellationToken cancellationToken = default) => null;
+        public Pageable<RoleDefinition> GetRoleDefinitions(Uri scope, CancellationToken cancellationToken = default) => null;
+        public Pageable<RoleDefinition> GetRoleDefinitions(string scope, CancellationToken cancellationToken = default) => null;
+        public AsyncPageable<RoleDefinition> GetRoleDefinitionsAsync(Uri scope, CancellationToken cancellationToken = default) => null;
+        public AsyncPageable<RoleDefinition> GetRoleDefinitionsAsync(string scope, CancellationToken cancellationToken = default) => null;
 
-        // The optional $filter parameter accepts the principalId property.
-        public Pageable<RoleAssignment> GetRoleAssignments(Uri scope, RoleAssignmentFilter? filter = default, CancellationToken cancellationToken = default) => null;
-        public Pageable<RoleAssignment> GetRoleAssignments(string scope, RoleAssignmentFilter? filter = default, CancellationToken cancellationToken = default) => null;
-        public AsyncPageable<RoleAssignment> GetRoleAssignmentsAsync(Uri scope, RoleAssignmentFilter? filter = default, CancellationToken cancellationToken = default) => null;
-        public AsyncPageable<RoleAssignment> GetRoleAssignmentsAsync(string scope, RoleAssignmentFilter? filter = default, CancellationToken cancellationToken = default) => null;
+        public Pageable<RoleAssignment> GetRoleAssignments(Uri scope, CancellationToken cancellationToken = default) => null;
+        public Pageable<RoleAssignment> GetRoleAssignments(string scope, CancellationToken cancellationToken = default) => null;
+        public AsyncPageable<RoleAssignment> GetRoleAssignmentsAsync(Uri scope, CancellationToken cancellationToken = default) => null;
+        public AsyncPageable<RoleAssignment> GetRoleAssignmentsAsync(string scope, CancellationToken cancellationToken = default) => null;
 
         // The role assignment name will be created automatically. The swagger specification reads, "The name of the role assignment to create. It can be any valid GUID."
         public Response<RoleAssignment> CreateRoleAssignment(Uri scope, RoleAssignmentProperties properties, CancellationToken cancellationToken = default) => null;

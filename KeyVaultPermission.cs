@@ -1,16 +1,17 @@
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace Azure.Security.KeyVault.AccessControl
 {
     public class KeyVaultPermission
     {
-        public KeyVaultPermission(IEnumerable<string> actions, IEnumerable<string> notActions, IEnumerable<string> dataActions, IEnumerable<string> notDataActions)
+        public KeyVaultPermission()
         {
         }
 
-        public IReadOnlyCollection<string> Actions { get; }
-        public IReadOnlyCollection<string> NotActions { get; }
-        public IReadOnlyCollection<string> DataActions { get; }
-        public IReadOnlyCollection<string> NotDataActions { get; }
+        // These properties will eventually be read-write so define them as such now so it's not a breaking change later.
+        public Collection<string> Actions { get; }
+        public Collection<string> NotActions { get; }
+        public Collection<string> DataActions { get; }
+        public Collection<string> NotDataActions { get; }
     }
 }
